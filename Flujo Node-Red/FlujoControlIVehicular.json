@@ -51,8 +51,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1100,
-        "y": 1120,
+        "x": 1080,
+        "y": 1100,
         "wires": [
             [
                 "f18efe514f382e81"
@@ -85,8 +85,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1360,
-        "y": 1100,
+        "x": 1320,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -105,8 +105,8 @@
         "correl": "",
         "expiry": "",
         "broker": "9c0ed33ac6aef07c",
-        "x": 510,
-        "y": 1020,
+        "x": 690,
+        "y": 1080,
         "wires": []
     },
     {
@@ -280,7 +280,8 @@
         "wires": [
             [
                 "35a394e6b27b3c1c",
-                "fa1846f9c6d02de2"
+                "fa1846f9c6d02de2",
+                "8eccd1c41ab39e3b"
             ]
         ]
     },
@@ -296,8 +297,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
-        "y": 880,
+        "x": 1360,
+        "y": 820,
         "wires": []
     },
     {
@@ -337,8 +338,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": "PYP321C",
+        "payloadType": "str",
         "x": 220,
         "y": 760,
         "wires": [
@@ -368,22 +369,6 @@
         "wires": []
     },
     {
-        "id": "e49a6843273ee220",
-        "type": "debug",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1140,
-        "y": 1400,
-        "wires": []
-    },
-    {
         "id": "86ad7ad756cb9fb9",
         "type": "json",
         "z": "d6c0238f4ecb9fcd",
@@ -391,15 +376,15 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 650,
-        "y": 1300,
+        "x": 850,
+        "y": 1280,
         "wires": [
             [
-                "e49a6843273ee220",
                 "de1291fe7b352c49",
                 "3579a48cb748b98a",
                 "2301cddbb2223814",
-                "43be59f2b5174cd3"
+                "43be59f2b5174cd3",
+                "943ac33f6173cd4c"
             ]
         ]
     },
@@ -413,11 +398,11 @@
         "height": 0,
         "name": "",
         "label": "Nombre",
-        "format": "{{msg.payload.nombre}}",
+        "format": "{{msg.payload.NOMBRE}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1140,
-        "y": 1240,
+        "x": 1300,
+        "y": 1200,
         "wires": []
     },
     {
@@ -429,12 +414,12 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Área:",
-        "format": "{{msg.payload[\"cumpleaños\"]}}",
+        "label": "Vehiculo",
+        "format": "{{msg.payload.VEHICULO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1130,
-        "y": 1280,
+        "x": 1300,
+        "y": 1240,
         "wires": []
     },
     {
@@ -446,12 +431,12 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Contacto;",
-        "format": "{{msg.payload.edad}}",
+        "label": "Contacto",
+        "format": "{{msg.payload.CORREO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1140,
-        "y": 1320,
+        "x": 1300,
+        "y": 1280,
         "wires": []
     },
     {
@@ -463,70 +448,13 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Nivel de Acceso",
-        "format": "{{msg.payload.acceso}}",
+        "label": "Celular",
+        "format": "{{msg.payload.TELEFONO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1160,
-        "y": 1360,
+        "x": 1300,
+        "y": 1320,
         "wires": []
-    },
-    {
-        "id": "57909e3646ba014f",
-        "type": "file in",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "filename": "payload",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 1320,
-        "wires": [
-            [
-                "86ad7ad756cb9fb9"
-            ]
-        ]
-    },
-    {
-        "id": "f2bce85cace1091b",
-        "type": "string",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "methods": [
-            {
-                "name": "delRightMost",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "/"
-                    }
-                ]
-            },
-            {
-                "name": "append",
-                "params": [
-                    {
-                        "type": "str",
-                        "value": "/info.json"
-                    }
-                ]
-            }
-        ],
-        "prop": "payload",
-        "propout": "payload",
-        "object": "msg",
-        "objectout": "msg",
-        "x": 270,
-        "y": 1320,
-        "wires": [
-            [
-                "57909e3646ba014f"
-            ]
-        ]
     },
     {
         "id": "e615eb7c99cceb37",
@@ -534,8 +462,8 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Apertura de pluma",
         "info": "",
-        "x": 270,
-        "y": 920,
+        "x": 230,
+        "y": 980,
         "wires": []
     },
     {
@@ -544,8 +472,8 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Información del propietario",
         "info": "",
-        "x": 270,
-        "y": 1180,
+        "x": 250,
+        "y": 1300,
         "wires": []
     },
     {
@@ -561,11 +489,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 810,
+        "x": 1010,
         "y": 1020,
         "wires": [
             [
-                "036d8d1d9741908b"
+                "036d8d1d9741908b",
+                "f18efe514f382e81"
             ]
         ]
     },
@@ -584,36 +513,6 @@
         "x": 1300,
         "y": 1020,
         "wires": []
-    },
-    {
-        "id": "9d2954997b115b07",
-        "type": "inject",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "v": "true",
-                "vt": "global"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 230,
-        "y": 1020,
-        "wires": [
-            [
-                "d2c1989b8d51e854"
-            ]
-        ]
     },
     {
         "id": "6911bec559458ff5",
@@ -758,7 +657,7 @@
         "name": "Registro por Bot",
         "info": "",
         "x": 200,
-        "y": 1620,
+        "y": 1740,
         "wires": []
     },
     {
@@ -772,8 +671,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 1700,
+        "x": 460,
+        "y": 1800,
         "wires": [
             [
                 "f4d3a1230e74c428"
@@ -785,14 +684,14 @@
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
         "name": "Bienvenida",
-        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Bienvenido al Control Interactivo Vehicular de la UAEM \\n \\nPara realizar algun proceso ejecute los siguientes comandos: \\n -Alta de usuario: /registro \\n -Levantar pluma: /abrir \\n-Consultar mi información: /consultar \\n-Buscar placa: /buscar\"\n}\n\nreturn msg;",
+        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Bienvenido al Control Interactivo Vehicular de la UAEM \\n \\nPara realizar algun proceso ejecute los siguientes comandos: \\n -Alta de usuario: /registro \\n -Levantar pluma: /abrir \\n-Consultar mi información: /consultar \\n-Buscar placa: /buscar\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 1520,
+        "x": 470,
+        "y": 1640,
         "wires": [
             [
                 "03bdf508bfdd5f2d"
@@ -811,7 +710,7 @@
         "finalize": "",
         "libs": [],
         "x": 1200,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "e4b718eafb9f95cb"
@@ -825,7 +724,7 @@
         "mydb": "08ab3652c7d88e63",
         "name": "",
         "x": 860,
-        "y": 2220,
+        "y": 2280,
         "wires": [
             [
                 "5c588a36b1ac3e0b",
@@ -845,8 +744,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 2160,
+        "x": 1220,
+        "y": 2220,
         "wires": []
     },
     {
@@ -861,7 +760,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 2220,
+        "y": 2280,
         "wires": [
             [
                 "ef34a63adb0237cc"
@@ -874,8 +773,8 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Consultar mi Información",
         "info": "",
-        "x": 230,
-        "y": 2160,
+        "x": 210,
+        "y": 2240,
         "wires": []
     },
     {
@@ -885,7 +784,7 @@
         "name": "Inicio del Bot",
         "info": "",
         "x": 190,
-        "y": 1460,
+        "y": 1540,
         "wires": []
     },
     {
@@ -895,7 +794,7 @@
         "name": "Buscar persona por placa",
         "info": "",
         "x": 210,
-        "y": 2320,
+        "y": 2380,
         "wires": []
     },
     {
@@ -909,8 +808,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 2400,
+        "x": 1260,
+        "y": 2540,
         "wires": [
             [
                 "b9a5905ba9c4d5e9"
@@ -923,8 +822,8 @@
         "z": "d6c0238f4ecb9fcd",
         "mydb": "08ab3652c7d88e63",
         "name": "",
-        "x": 1040,
-        "y": 2380,
+        "x": 980,
+        "y": 2440,
         "wires": [
             [
                 "405d71116be8f8da",
@@ -945,7 +844,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 2320,
+        "y": 2380,
         "wires": []
     },
     {
@@ -959,8 +858,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 2380,
+        "x": 730,
+        "y": 2440,
         "wires": [
             [
                 "a3c6a60f4d5a88d7"
@@ -979,7 +878,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 1840,
+        "y": 1920,
         "wires": [
             [
                 "78115b049d8051a6",
@@ -998,8 +897,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 1840,
+        "x": 450,
+        "y": 1920,
         "wires": [
             [
                 "b45f5eb0a6168d37"
@@ -1018,7 +917,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 1840,
+        "y": 1920,
         "wires": [
             [
                 "8d97cf115b668775"
@@ -1037,7 +936,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 1880,
+        "y": 1960,
         "wires": [
             [
                 "78115b049d8051a6"
@@ -1055,8 +954,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 1880,
+        "x": 450,
+        "y": 1960,
         "wires": [
             [
                 "cc51014129687339"
@@ -1075,7 +974,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 1880,
+        "y": 1960,
         "wires": [
             [
                 "3a2fca7e48ba084e"
@@ -1094,7 +993,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 1920,
+        "y": 2000,
         "wires": [
             [
                 "78115b049d8051a6"
@@ -1112,8 +1011,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 1920,
+        "x": 450,
+        "y": 2000,
         "wires": [
             [
                 "f545813c58973220"
@@ -1132,7 +1031,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 1920,
+        "y": 2000,
         "wires": [
             [
                 "dd5e27cc24be96d9"
@@ -1151,7 +1050,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 1960,
+        "y": 2040,
         "wires": [
             [
                 "78115b049d8051a6"
@@ -1169,8 +1068,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 1960,
+        "x": 450,
+        "y": 2040,
         "wires": [
             [
                 "6c2cac913d5730a3"
@@ -1189,7 +1088,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 1960,
+        "y": 2040,
         "wires": [
             [
                 "50ca8f92b1b39384"
@@ -1208,7 +1107,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 2000,
+        "y": 2080,
         "wires": [
             [
                 "78115b049d8051a6"
@@ -1226,8 +1125,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 2000,
+        "x": 450,
+        "y": 2080,
         "wires": [
             [
                 "b74c8a394e1d5e83"
@@ -1246,7 +1145,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 2000,
+        "y": 2080,
         "wires": [
             [
                 "d3c21749ef61b6ff"
@@ -1265,7 +1164,7 @@
         "finalize": "",
         "libs": [],
         "x": 990,
-        "y": 2040,
+        "y": 2120,
         "wires": [
             [
                 "a7c75f7e24f1ad9b",
@@ -1284,8 +1183,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 2040,
+        "x": 450,
+        "y": 2120,
         "wires": [
             [
                 "a1f9327118c80cf6"
@@ -1304,7 +1203,7 @@
         "stream": false,
         "addname": "",
         "x": 730,
-        "y": 2040,
+        "y": 2120,
         "wires": [
             [
                 "1bc1057ece4a4d50"
@@ -1323,7 +1222,7 @@
         "finalize": "",
         "libs": [],
         "x": 1410,
-        "y": 2040,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -1341,7 +1240,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1400,
-        "y": 1940,
+        "y": 2020,
         "wires": []
     },
     {
@@ -1356,7 +1255,7 @@
         "stream": true,
         "addname": "",
         "x": 550,
-        "y": 2380,
+        "y": 2440,
         "wires": [
             [
                 "0edc4e2ca1df6498"
@@ -1375,7 +1274,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 2380,
+        "y": 2440,
         "wires": [
             [
                 "b98ef62e775bb6a1"
@@ -1399,7 +1298,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 180,
-        "y": 1680,
+        "y": 1780,
         "wires": [
             [
                 "9183d904f9e7a764"
@@ -1424,7 +1323,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 1500,
+        "y": 1580,
         "wires": [
             [
                 "31cd665f5827cea5"
@@ -1449,7 +1348,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 180,
-        "y": 1740,
+        "y": 1820,
         "wires": [
             [
                 "9183d904f9e7a764"
@@ -1474,7 +1373,7 @@
         "removeregexcommand": false,
         "outputs": 1,
         "x": 200,
-        "y": 2220,
+        "y": 2280,
         "wires": [
             [
                 "3a33086e9c4f666b"
@@ -1498,7 +1397,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 1560,
+        "y": 1640,
         "wires": [
             [
                 "31cd665f5827cea5"
@@ -1522,8 +1421,8 @@
         "useregex": false,
         "removeregexcommand": false,
         "outputs": 1,
-        "x": 150,
-        "y": 2380,
+        "x": 190,
+        "y": 2440,
         "wires": [
             [
                 "8d5349d35aad09ba"
@@ -1547,10 +1446,11 @@
         "removeregexcommand": false,
         "outputs": 1,
         "x": 180,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
-                "a4342a93f61f93e5"
+                "a4342a93f61f93e5",
+                "712b78b30c8c7bc3"
             ]
         ]
     },
@@ -1571,7 +1471,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "64faaa11ded3923f"
@@ -1596,7 +1496,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 1920,
+        "y": 2000,
         "wires": [
             [
                 "2d5f4ba8c87977f7"
@@ -1621,7 +1521,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 180,
-        "y": 1960,
+        "y": 2060,
         "wires": [
             [
                 "a1b0211640ae5a20"
@@ -1646,7 +1546,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "b89b501d404ea798"
@@ -1671,7 +1571,7 @@
         "removeregexcommand": false,
         "outputs": 2,
         "x": 170,
-        "y": 2040,
+        "y": 2180,
         "wires": [
             [
                 "68c4f736973b9223"
@@ -1688,9 +1588,11 @@
         "haserroroutput": false,
         "outputs": 1,
         "x": 990,
-        "y": 1520,
+        "y": 1600,
         "wires": [
-            []
+            [
+                "e0527c3fb1c511d5"
+            ]
         ]
     },
     {
@@ -1702,7 +1604,7 @@
         "haserroroutput": false,
         "outputs": 1,
         "x": 1390,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             []
         ]
@@ -1716,7 +1618,7 @@
         "haserroroutput": false,
         "outputs": 1,
         "x": 1410,
-        "y": 2400,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -1729,8 +1631,8 @@
         "bot": "a6a8d326fb60d080",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 990,
-        "y": 1700,
+        "x": 750,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -1744,9 +1646,439 @@
         "haserroroutput": false,
         "outputs": 1,
         "x": 1410,
-        "y": 1840,
+        "y": 1920,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8eccd1c41ab39e3b",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "SELECT IDCHAT",
+        "func": "msg.topic = \"SELECT * FROM Personas WHERE PLACA='\"+msg.payload+\"';\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "05be4ba35184ff18"
+            ]
+        ]
+    },
+    {
+        "id": "05be4ba35184ff18",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "08ab3652c7d88e63",
+        "name": "",
+        "x": 600,
+        "y": 880,
+        "wires": [
+            [
+                "7ed02b7449a736d0"
+            ]
+        ]
+    },
+    {
+        "id": "bb6674dd909904bb",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "function 32",
+        "func": "var consulta = msg.payload;\nvar message;\n\nfor (var i = 0; i < consulta.length; i++) {\n    var row = consulta[i];\n    message += \"\\n\";\n    message = \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n\n}\n\nvar chatId = global.get(\"chatId\");\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de906c1b5fc2271f",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "function 33",
+        "func": "msg.payload=msg.payload.NOMBRE;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 880,
+        "wires": [
+            [
+                "35a394e6b27b3c1c"
+            ]
+        ]
+    },
+    {
+        "id": "7ed02b7449a736d0",
+        "type": "split",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 790,
+        "y": 960,
+        "wires": [
+            [
+                "de906c1b5fc2271f",
+                "86ad7ad756cb9fb9"
+            ]
+        ]
+    },
+    {
+        "id": "dad399abc861d9b8",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Autorización",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "943ac33f6173cd4c",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Autoriza?",
+        "func": "var chatId = msg.payload.CHATID\n\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Hola! autorizar salir o entrar al estacionamiento \\n \\nPara ejecutar uno de los comandos: \\n -Autorizar: /autorizar \\n -No autorizar: /noautorizar\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1380,
+        "wires": [
+            [
+                "fcc4893feb7f0787",
+                "dad399abc861d9b8"
+            ]
+        ]
+    },
+    {
+        "id": "fcc4893feb7f0787",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "d82f1a0644e36a0f",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Apertura de pluma",
+        "command": "/autorizar",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 1080,
+        "wires": [
+            [
+                "a3cbbae407f6c9a3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a3cbbae407f6c9a3",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Autorización",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1080,
+        "wires": [
+            [
+                "d2c1989b8d51e854"
+            ]
+        ]
+    },
+    {
+        "id": "7bdf242731d5dcb4",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Cierre de pluma",
+        "command": "/noautoriza",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 220,
+        "y": 1160,
+        "wires": [
+            [
+                "aba29065870fa6b0"
+            ],
+            [
+                "5a85295deb1a356d"
+            ]
+        ]
+    },
+    {
+        "id": "9f9a6a809bf58f11",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "aba29065870fa6b0",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "EMERGENCIA",
+        "func": "msg.payload=\"Hay una situación de emergencia\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1240,
+        "wires": [
+            [
+                "9f9a6a809bf58f11"
+            ]
+        ]
+    },
+    {
+        "id": "5a85295deb1a356d",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "No autorización",
+        "func": "msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1140,
+        "wires": [
+            [
+                "d2c1989b8d51e854"
+            ]
+        ]
+    },
+    {
+        "id": "3a6166750f1cb063",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "712b78b30c8c7bc3",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "function 34",
+        "func": "msg.payload = msg.payload.content;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1880,
+        "wires": [
+            [
+                "3a6166750f1cb063"
+            ]
+        ]
+    },
+    {
+        "id": "981a160d70109e39",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Alta de usuario",
+        "command": "/alta",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 200,
+        "y": 1700,
+        "wires": [
+            [
+                "545e4f4957dc8e5d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "545e4f4957dc8e5d",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Bienvenida",
+        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"para darte de alta en el Control Interactivo Vehicular de la FCAeI \\n necesitamos los siguientes datos:  \\n Nombre: \\n Modelo del vehículo: \\n Correo:\\n Celular:\\n Placa de vehículo: \\n Número de control o matrícula:\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1720,
+        "wires": [
+            [
+                "e0527c3fb1c511d5",
+                "56e3052bb34b085f"
+            ]
+        ]
+    },
+    {
+        "id": "e0527c3fb1c511d5",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "56e3052bb34b085f",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 1680,
+        "wires": [
+            [
+                "c874b4660af8396d"
+            ]
+        ]
+    },
+    {
+        "id": "c874b4660af8396d",
+        "type": "telegram reply",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "datos",
+        "bot": "a6a8d326fb60d080",
+        "x": 950,
+        "y": 1680,
+        "wires": [
+            [
+                "7afb3a70bd04d8cf"
+            ]
+        ]
+    },
+    {
+        "id": "186e9e15887f7e15",
+        "type": "split",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 1350,
+        "y": 1680,
+        "wires": [
+            [
+                "e0527c3fb1c511d5"
+            ]
+        ]
+    },
+    {
+        "id": "7afb3a70bd04d8cf",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "function 35",
+        "func": "msg.payload = msg.payload.content;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1680,
+        "wires": [
+            [
+                "186e9e15887f7e15",
+                "e0527c3fb1c511d5"
+            ]
         ]
     },
     {
