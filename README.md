@@ -43,5 +43,14 @@ node-red-node-ui-table
 <img src="./imagenes/BotTelegram.png">
 <img src="./imagenes/BotTelegram2.png">
 
+
 ## Interfaz gráfica:
-<img src="./imagenes/interfaz.png">
+<img src="./imagenes/Interfaz.png">
+
+En el documento "Kardex - Control Vehicular.docx" se puede encontrar la información necesaria para implementar el proyecto de IoT.
+
+La ubicación del código para la ESP32-CAM con los sensores de cámara y servomotor se encuentran en la carpeta CameraWebServer/
+
+La ubicación del código para la detección de placas a través del sensor de cámara se encuentran en la carpeta Detección de placas/
+
+El json del flujo de Node-Red se encuentra en la carpeta Flujo Node-Red/
