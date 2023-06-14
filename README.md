@@ -10,6 +10,29 @@ Objetivo general:	Incrementar el control de estacionamiento en el acceso y salid
 Objetivos específicos:	Mayor seguridad dentro de la universidad mediante el control de accesos vehicular.	Automatización de un sistema de accesos.
 
 Justificación:	Actualmente en distintas organizaciones a pesar de un equipo de vigilancia (recurso humano y tecnológico) y brindar espacios de estacionamientos para el uso exclusivo del personal, sigue habiendo mucha inseguridad debido a que se ha sustraído vehículos sin autorización del propietario. El uso de nuevas tecnologías de IoT permitirá tener al usuario un control y notificación de entrada y salida de su vehículo.
+A continuación se muestran los flujos de trabajo desarrollados en Node-Red en la versión más actualizada.
+
+Datos de las vesiones utilizadas en este proyecto:
+Node-RED version: v3.0.2
+Node.js  version: v16.20.0
+Computadora con virtualización de Linux 5.15.0-73-generic x64 LE
+Mqtt 5.0
+Python 3.8.8
+
+Nodos utilizados:
+node-red
+3.0.2
+node-red-contrib-string
+1.0.0
+node-red-contrib-telegrambot
+15.1.1
+node-red-dashboard
+3.1.7
+node-red-node-mysql
+1.0.3
+node-red-node-ui-table
+0.4.3
+
 ## Flujo Node-red
 <img src="./imagenes/Reconocimiento_placa.png">
 <img src="./imagenes/Reconocimiento_placa2.png">
@@ -20,3 +43,5 @@ Justificación:	Actualmente en distintas organizaciones a pesar de un equipo de 
 <img src="./imagenes/BotTelegram.png">
 <img src="./imagenes/BotTelegram2.png">
 
+## Interfaz gráfica:
+<img src="./imagenes/interfaz.png">
