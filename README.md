@@ -12,9 +12,11 @@ Objetivos específicos:	Mayor seguridad dentro de la universidad mediante el con
 Justificación:	Actualmente en distintas organizaciones a pesar de un equipo de vigilancia (recurso humano y tecnológico) y brindar espacios de estacionamientos para el uso exclusivo del personal, sigue habiendo mucha inseguridad debido a que se ha sustraído vehículos sin autorización del propietario. El uso de nuevas tecnologías de IoT permitirá tener al usuario un control y notificación de entrada y salida de su vehículo.
 ## Flujo Node-red
 <img src="./imagenes/Reconocimiento_placa.png">
+<img src="./imagenes/Reconocimiento_placa2.png">
 
 
 
 ## Bot Telegram
 <img src="./imagenes/BotTelegram.png">
+<img src="./imagenes/BotTelegram2.png">
 

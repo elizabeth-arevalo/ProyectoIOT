@@ -12,16 +12,16 @@
         "type": "ui_text",
         "z": "d6c0238f4ecb9fcd",
         "group": "69140d0c740b78cf",
-        "order": 5,
-        "width": 14,
-        "height": 5,
+        "order": 4,
+        "width": "10",
+        "height": "2",
         "name": "",
         "label": "Respuesta completa",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1380,
-        "y": 760,
+        "x": 1360,
+        "y": 680,
         "wires": []
     },
     {
@@ -30,34 +30,9 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Interfaz",
         "info": "",
-        "x": 190,
+        "x": 170,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "c25c63cf1803d8e1",
-        "type": "delay",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1080,
-        "y": 1100,
-        "wires": [
-            [
-                "f18efe514f382e81"
-            ]
-        ]
     },
     {
         "id": "f18efe514f382e81",
@@ -66,8 +41,8 @@
         "name": "",
         "label": "Acceso",
         "tooltip": "",
-        "group": "9037ae08f379058f",
-        "order": 2,
+        "group": "ed2ebf013ca997cc",
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -85,29 +60,11 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1320,
-        "y": 1080,
+        "x": 480,
+        "y": 1200,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "d2c1989b8d51e854",
-        "type": "mqtt out",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "topic": "codigoIoT/mqtt/civ/pluma/",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9c0ed33ac6aef07c",
-        "x": 690,
-        "y": 1080,
-        "wires": []
     },
     {
         "id": "6653380df8b9d339",
@@ -115,7 +72,7 @@
         "z": "d6c0238f4ecb9fcd",
         "group": "69140d0c740b78cf",
         "name": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "format": "<iframe id=\"video\" title=\"Video\" width=\"300\" height=\"200\"\n    src=\"http://192.16.0.12:81/stream\">\n</iframe>",
@@ -124,8 +81,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 200,
-        "y": 400,
+        "x": 400,
+        "y": 300,
         "wires": [
             []
         ]
@@ -136,7 +93,7 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "",
         "group": "69140d0c740b78cf",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -150,8 +107,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
-        "y": 460,
+        "x": 190,
+        "y": 380,
         "wires": [
             [
                 "19d9a2aebbf9ed41"
@@ -174,8 +131,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 430,
-        "y": 460,
+        "x": 410,
+        "y": 380,
         "wires": [
             [
                 "334cb59a65ce43ee"
@@ -193,8 +150,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 770,
-        "y": 460,
+        "x": 890,
+        "y": 380,
         "wires": [
             [
                 "c9267f8fa6a4d039"
@@ -212,8 +169,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1180,
-        "y": 460,
+        "x": 420,
+        "y": 480,
         "wires": [
             [
                 "59c491279b478903"
@@ -224,7 +181,7 @@
         "id": "59c491279b478903",
         "type": "exec",
         "z": "d6c0238f4ecb9fcd",
-        "command": "python3 /home/david/Documentos/github/license_plate_recognizer/get_placa.py",
+        "command": "python /home/david/Documentos/github/license_plate_recognizer/get_placa.py",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
@@ -232,8 +189,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1000,
-        "y": 560,
+        "x": 900,
+        "y": 480,
         "wires": [
             [
                 "56e237fae7b1299a"
@@ -258,8 +215,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
-        "y": 520,
+        "x": 1380,
+        "y": 480,
         "wires": []
     },
     {
@@ -275,8 +232,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 990,
-        "y": 760,
+        "x": 970,
+        "y": 680,
         "wires": [
             [
                 "35a394e6b27b3c1c",
@@ -298,7 +255,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1360,
-        "y": 820,
+        "y": 780,
         "wires": []
     },
     {
@@ -315,8 +272,8 @@
         "correl": "",
         "expiry": "",
         "broker": "4276dcf0b5fb42df",
-        "x": 650,
-        "y": 760,
+        "x": 630,
+        "y": 680,
         "wires": []
     },
     {
@@ -340,8 +297,8 @@
         "topic": "",
         "payload": "PYP321C",
         "payloadType": "str",
-        "x": 220,
-        "y": 760,
+        "x": 200,
+        "y": 680,
         "wires": [
             [
                 "c72f125be5249c18"
@@ -354,8 +311,8 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Envío de información",
         "info": "",
-        "x": 240,
-        "y": 660,
+        "x": 220,
+        "y": 580,
         "wires": []
     },
     {
@@ -364,8 +321,8 @@
         "z": "d6c0238f4ecb9fcd",
         "name": "Recepción de información",
         "info": "",
-        "x": 910,
-        "y": 660,
+        "x": 890,
+        "y": 580,
         "wires": []
     },
     {
@@ -376,8 +333,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 850,
-        "y": 1280,
+        "x": 790,
+        "y": 1020,
         "wires": [
             [
                 "de1291fe7b352c49",
@@ -401,8 +358,8 @@
         "format": "{{msg.payload.NOMBRE}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1300,
-        "y": 1200,
+        "x": 1200,
+        "y": 920,
         "wires": []
     },
     {
@@ -410,7 +367,7 @@
         "type": "ui_text",
         "z": "d6c0238f4ecb9fcd",
         "group": "ed2ebf013ca997cc",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -418,8 +375,8 @@
         "format": "{{msg.payload.VEHICULO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1300,
-        "y": 1240,
+        "x": 1200,
+        "y": 960,
         "wires": []
     },
     {
@@ -427,7 +384,7 @@
         "type": "ui_text",
         "z": "d6c0238f4ecb9fcd",
         "group": "ed2ebf013ca997cc",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -435,8 +392,8 @@
         "format": "{{msg.payload.CORREO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1300,
-        "y": 1280,
+        "x": 1200,
+        "y": 1000,
         "wires": []
     },
     {
@@ -444,7 +401,7 @@
         "type": "ui_text",
         "z": "d6c0238f4ecb9fcd",
         "group": "ed2ebf013ca997cc",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -452,28 +409,18 @@
         "format": "{{msg.payload.TELEFONO}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1300,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "e615eb7c99cceb37",
-        "type": "comment",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Apertura de pluma",
-        "info": "",
-        "x": 230,
-        "y": 980,
+        "x": 1200,
+        "y": 1040,
         "wires": []
     },
     {
         "id": "8e81dfa412488aef",
         "type": "comment",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Información del propietario",
+        "name": "Estado de la pluma",
         "info": "",
-        "x": 250,
-        "y": 1300,
+        "x": 170,
+        "y": 1040,
         "wires": []
     },
     {
@@ -489,42 +436,27 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1010,
-        "y": 1020,
+        "x": 210,
+        "y": 1120,
         "wires": [
             [
-                "036d8d1d9741908b",
-                "f18efe514f382e81"
+                "f18efe514f382e81",
+                "036d8d1d9741908b"
             ]
         ]
-    },
-    {
-        "id": "036d8d1d9741908b",
-        "type": "debug",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1300,
-        "y": 1020,
-        "wires": []
     },
     {
         "id": "6911bec559458ff5",
         "type": "mysql",
         "z": "d6c0238f4ecb9fcd",
-        "mydb": "08ab3652c7d88e63",
+        "mydb": "e392a1b5ede6d124",
         "name": "",
-        "x": 640,
-        "y": 160,
+        "x": 570,
+        "y": 80,
         "wires": [
             [
-                "6e135f5de686e561"
+                "6e135f5de686e561",
+                "d5c00eb1bf0e54e5"
             ]
         ]
     },
@@ -533,14 +465,14 @@
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
         "name": "SELECT",
-        "func": "msg.topic = \"SELECT * FROM Personas;\"\n\nreturn msg;",
+        "func": "//msg.topic = \"SELECT NOMBRE, VEHICULO, TELEFONO, PLACA FROM Personas;\"\nmsg.topic = \"SELECT * FROM Bitacoras where FECHA_S is NULL;\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 120,
+        "y": 100,
         "wires": [
             [
                 "6911bec559458ff5"
@@ -561,7 +493,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -572,7 +504,8 @@
         "y": 100,
         "wires": [
             [
-                "8d970423a5f55a5a"
+                "8d970423a5f55a5a",
+                "40dc1f7f35698e14"
             ]
         ]
     },
@@ -588,1068 +521,19 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 160,
+        "x": 780,
+        "y": 60,
         "wires": []
-    },
-    {
-        "id": "085f87e7b47a37dc",
-        "type": "inject",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "INSERT",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 200,
-        "wires": [
-            [
-                "b16c1e5d35cbf77d"
-            ]
-        ]
-    },
-    {
-        "id": "b16c1e5d35cbf77d",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "INSERT",
-        "func": "//Asignar chatId en una variable\nvar chatId = msg.payload.chatId;\n\nmsg.topic = \"INSERT INTO Personas (NOMBRE, VEHICULO, PLACA, NUM_TRA, CHATID) VALUES ('Gustavo', 'Camaro', 'AA1-135', 10025070, '\"+chatId+\"')\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 200,
-        "wires": [
-            [
-                "6911bec559458ff5"
-            ]
-        ]
     },
     {
         "id": "d3faeb0fd829bbfb",
         "type": "comment",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Prueba con MySQL",
+        "name": "Mostrar datos de entrada de vehiculos",
         "info": "",
-        "x": 210,
+        "x": 270,
         "y": 40,
         "wires": []
-    },
-    {
-        "id": "be3c88f26dc4cc27",
-        "type": "comment",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Registro por Bot",
-        "info": "",
-        "x": 200,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "9183d904f9e7a764",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Registro",
-        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Bienvenido al Registro de Usuarios!\\nPara darle de alta necesitaremos los siguientes datos: \\n \\n 1.- Nombre = /nombre y enseguida escribe tu nombre \\n2.-Tipo de Vehiculo = /carro y enseguida escribe el modelo \\n3.-Correo electronico = /correo y enseguida su email \\n4.-Numero Telefonico = /telefono y enseguida su numero de telefono \\n5.-Matricula vehicular= /placa y enseguida anotar su matricula \\n6.-Numero de control = /folio y enseguida escribir su numero de control\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 1800,
-        "wires": [
-            [
-                "f4d3a1230e74c428"
-            ]
-        ]
-    },
-    {
-        "id": "31cd665f5827cea5",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Bienvenida",
-        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Bienvenido al Control Interactivo Vehicular de la UAEM \\n \\nPara realizar algun proceso ejecute los siguientes comandos: \\n -Alta de usuario: /registro \\n -Levantar pluma: /abrir \\n-Consultar mi información: /consultar \\n-Buscar placa: /buscar\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 1640,
-        "wires": [
-            [
-                "03bdf508bfdd5f2d"
-            ]
-        ]
-    },
-    {
-        "id": "5c588a36b1ac3e0b",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "SELECT",
-        "func": "var consulta = msg.payload;\nvar message;\n\nfor(var i = 0; i < consulta.length; i++){\n    var row = consulta[i];\n    message += \"\\n\";\n    message = \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n    \n}\n\nvar chatId = global.get(\"chatId\");\nmsg.payload ={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 2300,
-        "wires": [
-            [
-                "e4b718eafb9f95cb"
-            ]
-        ]
-    },
-    {
-        "id": "ef34a63adb0237cc",
-        "type": "mysql",
-        "z": "d6c0238f4ecb9fcd",
-        "mydb": "08ab3652c7d88e63",
-        "name": "",
-        "x": 860,
-        "y": 2280,
-        "wires": [
-            [
-                "5c588a36b1ac3e0b",
-                "17018a667d23fc08"
-            ]
-        ]
-    },
-    {
-        "id": "17018a667d23fc08",
-        "type": "debug",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 2220,
-        "wires": []
-    },
-    {
-        "id": "3a33086e9c4f666b",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 12",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\nvar chatId = global.get(\"chatId\");\nmsg.topic = \"SELECT * FROM Personas WHERE CHATID = '\" + chatId + \"';\";\nmsg.leer = true;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 2280,
-        "wires": [
-            [
-                "ef34a63adb0237cc"
-            ]
-        ]
-    },
-    {
-        "id": "7d306f4ee7c34aa6",
-        "type": "comment",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Consultar mi Información",
-        "info": "",
-        "x": 210,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "a4d27313e092a42f",
-        "type": "comment",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Inicio del Bot",
-        "info": "",
-        "x": 190,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "8478b0f564709998",
-        "type": "comment",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "Buscar persona por placa",
-        "info": "",
-        "x": 210,
-        "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "405d71116be8f8da",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "SELECT",
-        "func": "var consulta = msg.payload;\nvar message;\n\nfor(var i = 0; i < consulta.length; i++){\n    var row = consulta[i];\n    message += \"\\n\";\n    message = \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n    \n}\n\nvar chatId = global.get(\"chatId\");\nmsg.payload ={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1260,
-        "y": 2540,
-        "wires": [
-            [
-                "b9a5905ba9c4d5e9"
-            ]
-        ]
-    },
-    {
-        "id": "a3c6a60f4d5a88d7",
-        "type": "mysql",
-        "z": "d6c0238f4ecb9fcd",
-        "mydb": "08ab3652c7d88e63",
-        "name": "",
-        "x": 980,
-        "y": 2440,
-        "wires": [
-            [
-                "405d71116be8f8da",
-                "da1c25364b959b25"
-            ]
-        ]
-    },
-    {
-        "id": "da1c25364b959b25",
-        "type": "debug",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "0edc4e2ca1df6498",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 13",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"buscar\",msg.payload);\nvar placa = global.get(\"buscar\");\nmsg.topic = \"SELECT * FROM Personas WHERE PLACA = '\" + placa + \"';\";\nmsg.leer = true;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 2440,
-        "wires": [
-            [
-                "a3c6a60f4d5a88d7"
-            ]
-        ]
-    },
-    {
-        "id": "8d97cf115b668775",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 19",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"nombre\", msg.payload);\nvar nombre1 = global.get(\"nombre\");\n\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": nombre1\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 1920,
-        "wires": [
-            [
-                "78115b049d8051a6",
-                "ce974989d3acffd4"
-            ]
-        ]
-    },
-    {
-        "id": "a4342a93f61f93e5",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 20",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\nvar chatId = global.get(\"chatId\");\n\n\n/* Extraer los datos relevantes del mensaje de Telegram\nglobal.set(\"messageText\", msg.payload.content);\nvar messageText = global.get(\"messageText\");\nvar timestamp = msg.payload.date;\n\nvar jsonMessage = {\n    chatId: chatId,\n    messageText: messageText,\n    timestamp: timestamp\n};\n\n// Pasar el objeto JSON al siguiente nodo\nmsg.payload = jsonMessage;*/\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 1920,
-        "wires": [
-            [
-                "b45f5eb0a6168d37"
-            ]
-        ]
-    },
-    {
-        "id": "b45f5eb0a6168d37",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/nombre ",
-        "spltType": "str",
-        "arraySplt": "1",
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 1920,
-        "wires": [
-            [
-                "8d97cf115b668775"
-            ]
-        ]
-    },
-    {
-        "id": "3a2fca7e48ba084e",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 21",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"carro\", msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 1960,
-        "wires": [
-            [
-                "78115b049d8051a6"
-            ]
-        ]
-    },
-    {
-        "id": "64faaa11ded3923f",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 22",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 1960,
-        "wires": [
-            [
-                "cc51014129687339"
-            ]
-        ]
-    },
-    {
-        "id": "cc51014129687339",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/carro  ",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 1960,
-        "wires": [
-            [
-                "3a2fca7e48ba084e"
-            ]
-        ]
-    },
-    {
-        "id": "dd5e27cc24be96d9",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 23",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"correo\", msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 2000,
-        "wires": [
-            [
-                "78115b049d8051a6"
-            ]
-        ]
-    },
-    {
-        "id": "2d5f4ba8c87977f7",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 24",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 2000,
-        "wires": [
-            [
-                "f545813c58973220"
-            ]
-        ]
-    },
-    {
-        "id": "f545813c58973220",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/correo ",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 2000,
-        "wires": [
-            [
-                "dd5e27cc24be96d9"
-            ]
-        ]
-    },
-    {
-        "id": "50ca8f92b1b39384",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 25",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"telefono\", msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 2040,
-        "wires": [
-            [
-                "78115b049d8051a6"
-            ]
-        ]
-    },
-    {
-        "id": "a1b0211640ae5a20",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 26",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 2040,
-        "wires": [
-            [
-                "6c2cac913d5730a3"
-            ]
-        ]
-    },
-    {
-        "id": "6c2cac913d5730a3",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/telefono ",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 2040,
-        "wires": [
-            [
-                "50ca8f92b1b39384"
-            ]
-        ]
-    },
-    {
-        "id": "d3c21749ef61b6ff",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 27",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"placa\", msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 2080,
-        "wires": [
-            [
-                "78115b049d8051a6"
-            ]
-        ]
-    },
-    {
-        "id": "b89b501d404ea798",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 28",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 2080,
-        "wires": [
-            [
-                "b74c8a394e1d5e83"
-            ]
-        ]
-    },
-    {
-        "id": "b74c8a394e1d5e83",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/placa ",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 2080,
-        "wires": [
-            [
-                "d3c21749ef61b6ff"
-            ]
-        ]
-    },
-    {
-        "id": "1bc1057ece4a4d50",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 29",
-        "func": "var chatId = global.get(\"chatId\");\nglobal.set(\"folio\", msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 2120,
-        "wires": [
-            [
-                "a7c75f7e24f1ad9b",
-                "78115b049d8051a6"
-            ]
-        ]
-    },
-    {
-        "id": "68c4f736973b9223",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 30",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 2120,
-        "wires": [
-            [
-                "a1f9327118c80cf6"
-            ]
-        ]
-    },
-    {
-        "id": "a1f9327118c80cf6",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/folio ",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 730,
-        "y": 2120,
-        "wires": [
-            [
-                "1bc1057ece4a4d50"
-            ]
-        ]
-    },
-    {
-        "id": "a7c75f7e24f1ad9b",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 31",
-        "func": "var chatId = global.get(\"chatId\");\nvar nombre = global.get(\"nombre\");\nvar carro = global.get(\"carro\");\nvar correo = global.get(\"correo\");\nvar telefono = global.get(\"telefono\");\nvar placa = global.get(\"placa\");\nvar folio = global.get(\"folio\");\n\nmsg.topic = \"INSERT INTO Personas (NOMBRE, VEHICULO, CORREO, TELEFONO, PLACA, NUM_TRA, CHATID) VALUES ('\"+nombre+\"', '\"+carro+\"', '\"+correo+\"', '\"+telefono+\"', '\"+placa+\"', '\"+folio+\"', '\" + chatId + \"')\";\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Usuario registrado con exito!\"\n}\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1410,
-        "y": 2120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "78115b049d8051a6",
-        "type": "debug",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1400,
-        "y": 2020,
-        "wires": []
-    },
-    {
-        "id": "b98ef62e775bb6a1",
-        "type": "split",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "splt": "/buscar",
-        "spltType": "str",
-        "arraySplt": "5",
-        "arraySpltType": "len",
-        "stream": true,
-        "addname": "",
-        "x": 550,
-        "y": 2440,
-        "wires": [
-            [
-                "0edc4e2ca1df6498"
-            ]
-        ]
-    },
-    {
-        "id": "8d5349d35aad09ba",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "ChatId",
-        "func": "global.set(\"chatId\", msg.payload.chatId);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 2440,
-        "wires": [
-            [
-                "b98ef62e775bb6a1"
-            ]
-        ]
-    },
-    {
-        "id": "98afbb609f029d03",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/registró",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 180,
-        "y": 1780,
-        "wires": [
-            [
-                "9183d904f9e7a764"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "e63eaaff42d9428f",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/start",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 1580,
-        "wires": [
-            [
-                "31cd665f5827cea5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "41bf572edb68e8f8",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/registro",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 180,
-        "y": 1820,
-        "wires": [
-            [
-                "9183d904f9e7a764"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "17e0770a8de09008",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/consultar",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": false,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 1,
-        "x": 200,
-        "y": 2280,
-        "wires": [
-            [
-                "3a33086e9c4f666b"
-            ]
-        ]
-    },
-    {
-        "id": "d2a6fc3106c1fa6f",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/Hola",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 1640,
-        "wires": [
-            [
-                "31cd665f5827cea5"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "35631f792035dada",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/buscar",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": false,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 1,
-        "x": 190,
-        "y": 2440,
-        "wires": [
-            [
-                "8d5349d35aad09ba"
-            ]
-        ]
-    },
-    {
-        "id": "6e879f072789ef8a",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/nombre",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": false,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 1,
-        "x": 180,
-        "y": 1880,
-        "wires": [
-            [
-                "a4342a93f61f93e5",
-                "712b78b30c8c7bc3"
-            ]
-        ]
-    },
-    {
-        "id": "ecb6e64e92a6fd8b",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/carro",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 1940,
-        "wires": [
-            [
-                "64faaa11ded3923f"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f874238e593da992",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/correo",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 2000,
-        "wires": [
-            [
-                "2d5f4ba8c87977f7"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "c3ddd698289e9e92",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/telefono",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 180,
-        "y": 2060,
-        "wires": [
-            [
-                "a1b0211640ae5a20"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "a77fa78750ff99c4",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/placa",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 2120,
-        "wires": [
-            [
-                "b89b501d404ea798"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "2bbc5394623415e9",
-        "type": "telegram command",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "command": "/folio",
-        "description": "",
-        "registercommand": false,
-        "language": "",
-        "scope": "default",
-        "bot": "a6a8d326fb60d080",
-        "strict": false,
-        "hasresponse": true,
-        "useregex": false,
-        "removeregexcommand": false,
-        "outputs": 2,
-        "x": 170,
-        "y": 2180,
-        "wires": [
-            [
-                "68c4f736973b9223"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "03bdf508bfdd5f2d",
-        "type": "telegram sender",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 990,
-        "y": 1600,
-        "wires": [
-            [
-                "e0527c3fb1c511d5"
-            ]
-        ]
-    },
-    {
-        "id": "e4b718eafb9f95cb",
-        "type": "telegram sender",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1390,
-        "y": 2300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b9a5905ba9c4d5e9",
-        "type": "telegram sender",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1410,
-        "y": 2460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f4d3a1230e74c428",
-        "type": "telegram sender",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 750,
-        "y": 1800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ce974989d3acffd4",
-        "type": "telegram sender",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1410,
-        "y": 1920,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8eccd1c41ab39e3b",
@@ -1663,7 +547,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 880,
+        "y": 840,
         "wires": [
             [
                 "05be4ba35184ff18"
@@ -1674,31 +558,14 @@
         "id": "05be4ba35184ff18",
         "type": "mysql",
         "z": "d6c0238f4ecb9fcd",
-        "mydb": "08ab3652c7d88e63",
+        "mydb": "e392a1b5ede6d124",
         "name": "",
-        "x": 600,
-        "y": 880,
+        "x": 530,
+        "y": 840,
         "wires": [
             [
                 "7ed02b7449a736d0"
             ]
-        ]
-    },
-    {
-        "id": "bb6674dd909904bb",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 32",
-        "func": "var consulta = msg.payload;\nvar message;\n\nfor (var i = 0; i < consulta.length; i++) {\n    var row = consulta[i];\n    message += \"\\n\";\n    message = \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n\n}\n\nvar chatId = global.get(\"chatId\");\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1190,
-        "y": 940,
-        "wires": [
-            []
         ]
     },
     {
@@ -1713,7 +580,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 880,
+        "y": 840,
         "wires": [
             [
                 "35a394e6b27b3c1c"
@@ -1732,7 +599,7 @@
         "stream": false,
         "addname": "",
         "x": 790,
-        "y": 960,
+        "y": 860,
         "wires": [
             [
                 "de906c1b5fc2271f",
@@ -1748,8 +615,8 @@
         "bot": "a6a8d326fb60d080",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 950,
-        "y": 1400,
+        "x": 1190,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -1758,15 +625,15 @@
         "id": "943ac33f6173cd4c",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Autoriza?",
+        "name": "Mensaje para autorizar",
         "func": "var chatId = msg.payload.CHATID\n\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Hola! autorizar salir o entrar al estacionamiento \\n \\nPara ejecutar uno de los comandos: \\n -Autorizar: /autorizar \\n -No autorizar: /noautorizar\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 1380,
+        "x": 840,
+        "y": 1180,
         "wires": [
             [
                 "fcc4893feb7f0787",
@@ -1787,15 +654,547 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1460,
+        "x": 1180,
+        "y": 1200,
         "wires": []
     },
     {
-        "id": "d82f1a0644e36a0f",
+        "id": "f387621e0920feae",
+        "type": "comment",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Registro por Bot",
+        "info": "",
+        "x": 160,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "459212cefbd97c32",
         "type": "telegram command",
         "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/registró",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 140,
+        "y": 1540,
+        "wires": [
+            [
+                "c959d0c0b0f3ac51"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c959d0c0b0f3ac51",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Registro",
+        "func": "var chatId = msg.payload.chatId;\n\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Bienvenido al Registro de Usuarios!\\nPara darle de alta necesitaremos los siguientes datos: \\n\\n 1.- Nombre \\n2.-Tipo de Vehiculo \\n3.-Correo electronico \\n4.-Numero Telefonico \\n5.-Matricula vehicular \\n6.-Numero de control\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1560,
+        "wires": [
+            [
+                "75429988771e9faf"
+            ]
+        ]
+    },
+    {
+        "id": "39b2c69b8211b194",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/start",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 1320,
+        "wires": [
+            [
+                "e4d4ae91e73d6fe9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e4d4ae91e73d6fe9",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Bienvenida",
+        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Hola! Bienvenido al Control Interactivo Vehicular de la UAEM \\n \\nPara realizar algún proceso ejecute los siguientes comandos: \\n-Alta de usuario: /registro \\n-Consultar mi información: /consultar \\n-Buscar placa: /buscar\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1340,
+        "wires": [
+            [
+                "44e06f7b73033dfb"
+            ]
+        ]
+    },
+    {
+        "id": "44e06f7b73033dfb",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d0d751b92d0f3c8",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/registro",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 140,
+        "y": 1600,
+        "wires": [
+            [
+                "c959d0c0b0f3ac51"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "73029a85b764a97f",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/consultar",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 140,
+        "y": 1760,
+        "wires": [
+            [
+                "21bfc8f9bd0f7807"
+            ]
+        ]
+    },
+    {
+        "id": "b93d355daa6cba92",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "RESPUESTA",
+        "func": "var consulta = msg.payload;\nvar message;\nvar chatId;\n\nfor(var i = 0; i < consulta.length; i++){\n    var row = consulta[i];\n    chatId = row.CHATID;\n    message = \"Datos del usuario: \\n\";\n    message += \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n    \n}\nmsg.payload ={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1820,
+        "wires": [
+            [
+                "a8fa99f2e540cd84"
+            ]
+        ]
+    },
+    {
+        "id": "dbaa20ef5fe0989e",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 590,
+        "y": 1760,
+        "wires": [
+            [
+                "b93d355daa6cba92",
+                "a6424409b93420cc"
+            ]
+        ]
+    },
+    {
+        "id": "33532fe14e32e473",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/Hola",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 1380,
+        "wires": [
+            [
+                "e4d4ae91e73d6fe9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a6424409b93420cc",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "a8fa99f2e540cd84",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21bfc8f9bd0f7807",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "SELECT PERSONA",
+        "func": "var chatId = msg.payload.chatId;\nmsg.topic = \"SELECT * FROM Personas WHERE CHATID = '\" + chatId + \"';\";\nmsg.leer = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1760,
+        "wires": [
+            [
+                "dbaa20ef5fe0989e"
+            ]
+        ]
+    },
+    {
+        "id": "5433a32b77a513bd",
+        "type": "comment",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Consultar mi Información",
+        "info": "",
+        "x": 210,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "af150d5b33b08efd",
+        "type": "comment",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Inicio del Bot",
+        "info": "",
+        "x": 170,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "6521de00de4ca274",
+        "type": "comment",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Buscar persona por placa",
+        "info": "",
+        "x": 190,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "88076719c83c7a61",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/buscar",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": false,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 1960,
+        "wires": [
+            [
+                "0f96276a4862322b"
+            ]
+        ]
+    },
+    {
+        "id": "ae6366f90d918a93",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "RESPUESTA",
+        "func": "var chatId=flow.get(\"chatId\");\nvar consulta = msg.payload;\nvar message=\"No se encuentró.\";\n\nfor(var i = 0; i < consulta.length; i++){\n    var row = consulta[i];\n    chatId = msg.chatid;\n    message += \"\\n\";\n    message = \"Nombre: \" + row.NOMBRE + \"\\n\";\n    message += \"Vehiculo: \" + row.VEHICULO + \"\\n\";\n    message += \"Correo: \" + row.CORREO + \"\\n\";\n    message += \"Telefono: \" + row.TELEFONO + \"\\n\";\n    message += \"Placa: \" + row.PLACA + \"\\n\";\n    message += \"Folio: \" + row.NUM_TRA + \"\\n\";\n    \n}\n\nmsg.payload ={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": message\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1980,
+        "wires": [
+            [
+                "d70dfd5bf6377c8c",
+                "b927910bb4f8831a"
+            ]
+        ]
+    },
+    {
+        "id": "b78cb333f47f1994",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 610,
+        "y": 1960,
+        "wires": [
+            [
+                "ae6366f90d918a93"
+            ]
+        ]
+    },
+    {
+        "id": "b927910bb4f8831a",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "0f96276a4862322b",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "SELECT De Personas",
+        "func": "var placa = msg.payload.content;\nvar mensaje = placa.split(\" \");\nmsg.topic = \"SELECT * FROM Personas WHERE PLACA = '\" + mensaje[1] + \"';\";\nmsg.leer = true;\nflow.set(\"chatId\", msg.payload.chatId)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1960,
+        "wires": [
+            [
+                "b78cb333f47f1994"
+            ]
+        ]
+    },
+    {
+        "id": "d70dfd5bf6377c8c",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75429988771e9faf",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 1560,
+        "wires": [
+            [
+                "a015bb27fd4f9165"
+            ]
+        ]
+    },
+    {
+        "id": "a015bb27fd4f9165",
+        "type": "telegram reply",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "datos",
+        "bot": "a6a8d326fb60d080",
+        "x": 730,
+        "y": 1560,
+        "wires": [
+            [
+                "5f0ef8d13284c077",
+                "699dd66ff6fea9c3"
+            ]
+        ]
+    },
+    {
+        "id": "5f0ef8d13284c077",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "INSERT PERSONA",
+        "func": "var chatId = msg.payload.chatId;\nvar mensaje = msg.payload.content;\nvar mensaje1 = mensaje.split(\"\\n\");\nvar nombre = mensaje1[0];\nvar vehiculo = mensaje1[1];\nvar correo = mensaje1[2];\nvar telefono = mensaje1[3];\nvar placa = mensaje1[4];\nvar folio = mensaje1[5];\n\nmsg.topic = \"INSERT INTO Personas (CHATID, NOMBRE, VEHICULO, CORREO, TELEFONO, PLACA, FOLIO) VALUES ('\" + chatId +\"','\" + nombre + \"','\" + vehiculo + \"','\" + correo + \"','\" + telefono + \"','\" + placa + \"','\" + folio + \"');\";\nmsg.leer = true;\nreturn msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1560,
+        "wires": [
+            [
+                "8c59a32b0a0e9965"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8c59a32b0a0e9965",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 1110,
+        "y": 1460,
+        "wires": [
+            [
+                "e5aeaa1daf279ecd"
+            ]
+        ]
+    },
+    {
+        "id": "699dd66ff6fea9c3",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "RESPUESTA",
+        "func": "var chatId = msg.payload.chatId;\n\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"¡Ejecuta el comando /consultar nuevamente para saber su estatus en otro caso /start o /Hola si desea realizar otra operación\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1620,
+        "wires": [
+            [
+                "19459529aedbaf59"
+            ]
+        ]
+    },
+    {
+        "id": "19459529aedbaf59",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "730396c2093641d8",
+        "type": "mqtt out",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "topic": "codigoIoT/mqtt/civ/pluma/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5b7c4545661ec675",
+        "x": 690,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "ca44c3bc3b723185",
+        "type": "comment",
+        "z": "d6c0238f4ecb9fcd",
         "name": "Apertura de pluma",
+        "info": "",
+        "x": 170,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "79e2c7a359f9f898",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Autorización",
         "command": "/autorizar",
         "description": "",
         "registercommand": false,
@@ -1807,40 +1206,41 @@
         "useregex": false,
         "removeregexcommand": false,
         "outputs": 2,
-        "x": 230,
-        "y": 1080,
+        "x": 150,
+        "y": 2140,
         "wires": [
             [
-                "a3cbbae407f6c9a3"
+                "6dd3f20cc601dc9d"
             ],
             []
         ]
     },
     {
-        "id": "a3cbbae407f6c9a3",
+        "id": "6dd3f20cc601dc9d",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
         "name": "Autorización",
-        "func": "msg.payload = true;\nreturn msg;",
+        "func": "flow.set(\"chatId\", msg.payload.chatId);\nmsg.payload = true;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 1080,
+        "x": 410,
+        "y": 2140,
         "wires": [
             [
-                "d2c1989b8d51e854"
+                "730396c2093641d8",
+                "ef1e188cdaf47ef6"
             ]
         ]
     },
     {
-        "id": "7bdf242731d5dcb4",
+        "id": "61ac04b3223626d3",
         "type": "telegram command",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Cierre de pluma",
-        "command": "/noautoriza",
+        "name": "No autorización",
+        "command": "/noautorizar",
         "description": "",
         "registercommand": false,
         "language": "",
@@ -1851,22 +1251,22 @@
         "useregex": false,
         "removeregexcommand": false,
         "outputs": 2,
-        "x": 220,
-        "y": 1160,
+        "x": 160,
+        "y": 2220,
         "wires": [
             [
-                "aba29065870fa6b0"
+                "6e9bd1cd479a73ba",
+                "dc474f9838b08e80",
+                "2d3238a3e4ccf4bd"
             ],
-            [
-                "5a85295deb1a356d"
-            ]
+            []
         ]
     },
     {
-        "id": "9f9a6a809bf58f11",
+        "id": "8a2e5d58ab18fb20",
         "type": "debug",
         "z": "d6c0238f4ecb9fcd",
-        "name": "debug 13",
+        "name": "debug 27",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1874,12 +1274,12 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 1180,
+        "x": 640,
+        "y": 2360,
         "wires": []
     },
     {
-        "id": "aba29065870fa6b0",
+        "id": "dc474f9838b08e80",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
         "name": "EMERGENCIA",
@@ -1889,16 +1289,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 1240,
+        "x": 420,
+        "y": 2260,
         "wires": [
             [
-                "9f9a6a809bf58f11"
+                "8a2e5d58ab18fb20"
             ]
         ]
     },
     {
-        "id": "5a85295deb1a356d",
+        "id": "6e9bd1cd479a73ba",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
         "name": "No autorización",
@@ -1908,19 +1308,52 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 1140,
+        "x": 420,
+        "y": 2200,
         "wires": [
             [
-                "d2c1989b8d51e854"
+                "730396c2093641d8"
             ]
         ]
     },
     {
-        "id": "3a6166750f1cb063",
+        "id": "ef1e188cdaf47ef6",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Insertar Entrada",
+        "func": "var chatId = flow.get(\"chatId\");\nvar currentDate = new Date();\nvar hora = currentDate.getHours();\nvar minutos = currentDate.getMinutes();\nvar dia = currentDate.getDate();\nvar mes = currentDate.getMonth() + 1;\nvar anio = currentDate.getFullYear();\n\nif(hora < 10){\n    hora = '0' + hora;\n}\n\nif(minutos < 10){\n    minutos = '0' + minutos;\n}\nvar horaActual = hora + ':' + minutos;\n\nif(dia < 10){\n    dia = '0' + dia;\n}\n\nif(mes < 10){\n    mes = '0' + mes;\n}\n\nvar fecha = anio + '/' + mes + '/' + dia;\n\nmsg.topic = \"INSERT INTO Bitacoras (HORA_E, CHATID, FECHA_E) VALUES ('\" + horaActual + \"','\" + chatId + \"', '\" + fecha + \"');\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 2140,
+        "wires": [
+            [
+                "f35ecad249daf94a"
+            ]
+        ]
+    },
+    {
+        "id": "f35ecad249daf94a",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 890,
+        "y": 2140,
+        "wires": [
+            [
+                "b58b06805f2848e0"
+            ]
+        ]
+    },
+    {
+        "id": "b58b06805f2848e0",
         "type": "debug",
         "z": "d6c0238f4ecb9fcd",
-        "name": "debug 14",
+        "name": "debug 28",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1928,35 +1361,16 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1880,
+        "x": 1060,
+        "y": 2140,
         "wires": []
     },
     {
-        "id": "712b78b30c8c7bc3",
-        "type": "function",
-        "z": "d6c0238f4ecb9fcd",
-        "name": "function 34",
-        "func": "msg.payload = msg.payload.content;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 1880,
-        "wires": [
-            [
-                "3a6166750f1cb063"
-            ]
-        ]
-    },
-    {
-        "id": "981a160d70109e39",
+        "id": "73c744b4688f31f2",
         "type": "telegram command",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Alta de usuario",
-        "command": "/alta",
+        "name": "Salir del estacionamiento",
+        "command": "/salir",
         "description": "",
         "registercommand": false,
         "language": "",
@@ -1967,40 +1381,54 @@
         "useregex": false,
         "removeregexcommand": false,
         "outputs": 2,
-        "x": 200,
-        "y": 1700,
+        "x": 190,
+        "y": 2420,
         "wires": [
             [
-                "545e4f4957dc8e5d"
+                "ef2897ae762b83f6"
             ],
             []
         ]
     },
     {
-        "id": "545e4f4957dc8e5d",
+        "id": "16ea4c1bd960ec1a",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
-        "name": "Bienvenida",
-        "func": "//Asignar ChatId a un variable\nvar chatId = msg.payload.chatId;\n\nmsg.payload={\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"para darte de alta en el Control Interactivo Vehicular de la FCAeI \\n necesitamos los siguientes datos:  \\n Nombre: \\n Modelo del vehículo: \\n Correo:\\n Celular:\\n Placa de vehículo: \\n Número de control o matrícula:\"\n}\n\nreturn msg;",
+        "name": "Insertar Salida",
+        "func": "var chatId = flow.get(\"chatId\");\nvar currentDate = new Date();\nvar hora = currentDate.getHours();\nvar minutos = currentDate.getMinutes();\nvar dia = currentDate.getDate();\nvar mes = currentDate.getMonth() + 1;\nvar anio = currentDate.getFullYear();\n\nif(hora < 10){\n    hora = '0' + hora;\n}\n\nif(minutos < 10){\n    minutos = '0' + minutos;\n}\nvar horaActual = hora + ':' + minutos;\n\nif(dia < 10){\n    dia = '0' + dia;\n}\n\nif(mes < 10){\n    mes = '0' + mes;\n}\n\nvar fecha = anio + '/' + mes + '/' + dia;\n\nmsg.topic = \"UPDATE Bitacoras SET HORA_S='\" + horaActual + \"', FECHA_S ='\"+ fecha +\"' WHERE CHATID='\" + chatId + \"';\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 1720,
+        "x": 660,
+        "y": 2420,
         "wires": [
             [
-                "e0527c3fb1c511d5",
-                "56e3052bb34b085f"
+                "d52f588774f21f87",
+                "6c146df83222225f"
             ]
         ]
     },
     {
-        "id": "e0527c3fb1c511d5",
+        "id": "d52f588774f21f87",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 930,
+        "y": 2420,
+        "wires": [
+            [
+                "6c146df83222225f"
+            ]
+        ]
+    },
+    {
+        "id": "6c146df83222225f",
         "type": "debug",
         "z": "d6c0238f4ecb9fcd",
-        "name": "debug 15",
+        "name": "debug 29",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2008,42 +1436,217 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 1780,
+        "x": 1140,
+        "y": 2420,
         "wires": []
     },
     {
-        "id": "56e3052bb34b085f",
-        "type": "telegram sender",
+        "id": "b8c1dacd539fee65",
+        "type": "inject",
         "z": "d6c0238f4ecb9fcd",
         "name": "",
-        "bot": "a6a8d326fb60d080",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 770,
-        "y": 1680,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 920,
         "wires": [
             [
-                "c874b4660af8396d"
+                "0676887f403a6627"
             ]
         ]
     },
     {
-        "id": "c874b4660af8396d",
-        "type": "telegram reply",
+        "id": "0676887f403a6627",
+        "type": "mqtt out",
         "z": "d6c0238f4ecb9fcd",
-        "name": "datos",
-        "bot": "a6a8d326fb60d080",
-        "x": 950,
-        "y": 1680,
+        "name": "",
+        "topic": "codigoIoT/mqtt/civ/pluma/",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4276dcf0b5fb42df",
+        "x": 410,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "57d7870e294d3061",
+        "type": "inject",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "cerrar",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 980,
         "wires": [
             [
-                "7afb3a70bd04d8cf"
+                "0676887f403a6627"
             ]
         ]
     },
     {
-        "id": "186e9e15887f7e15",
+        "id": "e5aeaa1daf279ecd",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "d5c00eb1bf0e54e5",
+        "type": "ui_table",
+        "z": "d6c0238f4ecb9fcd",
+        "group": "69140d0c740b78cf",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 770,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ef2897ae762b83f6",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "Autorizar",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 2420,
+        "wires": [
+            [
+                "730396c2093641d8",
+                "16ea4c1bd960ec1a"
+            ]
+        ]
+    },
+    {
+        "id": "18a603141b755934",
+        "type": "ui_gauge",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "group": "ed2ebf013ca997cc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vehiculos ",
+        "label": "units",
+        "format": "{{msg.payload.n}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 940,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "40dc1f7f35698e14",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "SELECT",
+        "func": "//msg.topic = \"SELECT NOMBRE, VEHICULO, TELEFONO, PLACA FROM Personas;\"\nmsg.topic = \"SELECT COUNT(CHATID) as n FROM Bitacoras where FECHA_S is NULL;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "27d0f68fc3c76280"
+            ]
+        ]
+    },
+    {
+        "id": "27d0f68fc3c76280",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 570,
+        "y": 180,
+        "wires": [
+            [
+                "6e135f5de686e561",
+                "eb3f1dd660e41a04"
+            ]
+        ]
+    },
+    {
+        "id": "60927a734c44d4b2",
+        "type": "json",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "18a603141b755934"
+            ]
+        ]
+    },
+    {
+        "id": "eb3f1dd660e41a04",
         "type": "split",
         "z": "d6c0238f4ecb9fcd",
         "name": "",
@@ -2051,35 +1654,201 @@
         "spltType": "str",
         "arraySplt": 1,
         "arraySpltType": "len",
-        "stream": true,
+        "stream": false,
         "addname": "",
-        "x": 1350,
-        "y": 1680,
+        "x": 690,
+        "y": 260,
         "wires": [
             [
-                "e0527c3fb1c511d5"
+                "60927a734c44d4b2"
             ]
         ]
     },
     {
-        "id": "7afb3a70bd04d8cf",
+        "id": "99ebf29930be1e7c",
+        "type": "telegram command",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "command": "/disponibilidad",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "a6a8d326fb60d080",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 2520,
+        "wires": [
+            [
+                "6721da3a88a3a939"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6721da3a88a3a939",
         "type": "function",
         "z": "d6c0238f4ecb9fcd",
-        "name": "function 35",
-        "func": "msg.payload = msg.payload.content;\nreturn msg;",
+        "name": "SELECT",
+        "func": "//msg.topic = \"SELECT NOMBRE, VEHICULO, TELEFONO, PLACA FROM Personas;\"\nflow.set(\"chatId\",msg.payload.chatId);\nmsg.topic = \"SELECT COUNT(CHATID) as n FROM Bitacoras where FECHA_S is NULL;\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
-        "y": 1680,
+        "x": 400,
+        "y": 2520,
         "wires": [
             [
-                "186e9e15887f7e15",
-                "e0527c3fb1c511d5"
+                "19b07f38e8c45b2e"
             ]
         ]
+    },
+    {
+        "id": "19b07f38e8c45b2e",
+        "type": "mysql",
+        "z": "d6c0238f4ecb9fcd",
+        "mydb": "e392a1b5ede6d124",
+        "name": "",
+        "x": 590,
+        "y": 2520,
+        "wires": [
+            [
+                "d086383013ed7df6"
+            ]
+        ]
+    },
+    {
+        "id": "169b7381c4fb19ff",
+        "type": "json",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 930,
+        "y": 2520,
+        "wires": [
+            [
+                "92a5719884828956"
+            ]
+        ]
+    },
+    {
+        "id": "d086383013ed7df6",
+        "type": "split",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 770,
+        "y": 2520,
+        "wires": [
+            [
+                "169b7381c4fb19ff"
+            ]
+        ]
+    },
+    {
+        "id": "92a5719884828956",
+        "type": "function",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "function 34",
+        "func": "var chatId = flow.get(\"chatId\");\nmsg.payload = {\n    \"chatId\": chatId,\n    \"type\": \"message\",\n    \"content\": \"Hay \" + (30 - msg.payload.n) + \" espacios disponibles\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 2520,
+        "wires": [
+            [
+                "f1b0a792502bcf4a"
+            ]
+        ]
+    },
+    {
+        "id": "f1b0a792502bcf4a",
+        "type": "telegram sender",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "bot": "a6a8d326fb60d080",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1310,
+        "y": 2520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c25c63cf1803d8e1",
+        "type": "delay",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 160,
+        "y": 1200,
+        "wires": [
+            [
+                "f18efe514f382e81"
+            ]
+        ]
+    },
+    {
+        "id": "036d8d1d9741908b",
+        "type": "debug",
+        "z": "d6c0238f4ecb9fcd",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "2d3238a3e4ccf4bd",
+        "type": "ui_toast",
+        "z": "d6c0238f4ecb9fcd",
+        "position": "top left",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Problema de seguridad",
+        "name": "ALERTA",
+        "x": 420,
+        "y": 2320,
+        "wires": []
     },
     {
         "id": "7db19ffd63de6a8a",
@@ -2094,51 +1863,24 @@
     {
         "id": "69140d0c740b78cf",
         "type": "ui_group",
-        "name": "Reconocimiento facial",
+        "name": "Control Vehicular",
         "tab": "f3c4a2974172cb0f",
         "order": 2,
         "disp": true,
-        "width": 14,
+        "width": "10",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "9037ae08f379058f",
+        "id": "ed2ebf013ca997cc",
         "type": "ui_group",
-        "name": "Apertura de pluma",
+        "name": "Datos",
         "tab": "f3c4a2974172cb0f",
-        "order": 4,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "9c0ed33ac6aef07c",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
     },
     {
         "id": "4276dcf0b5fb42df",
@@ -2168,23 +1910,12 @@
         "sessionExpiry": ""
     },
     {
-        "id": "ed2ebf013ca997cc",
-        "type": "ui_group",
-        "name": "Datos",
-        "tab": "f3c4a2974172cb0f",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "08ab3652c7d88e63",
+        "id": "e392a1b5ede6d124",
         "type": "MySQLdatabase",
         "name": "",
         "host": "127.0.0.1",
         "port": "3306",
-        "db": "ControlInteractivoVehicular",
+        "db": "CIV",
         "tz": "",
         "charset": "UTF8"
     },
@@ -2212,6 +1943,33 @@
         "useselfsignedcertificate": false,
         "sslterminated": false,
         "verboselogging": false
+    },
+    {
+        "id": "5b7c4545661ec675",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "f3c4a2974172cb0f",
