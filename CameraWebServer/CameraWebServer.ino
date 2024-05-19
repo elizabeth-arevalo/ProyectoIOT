@@ -35,8 +35,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char* ssid = "IZZI-0040";
-const char* password = "8871B1C40040";
+const char* ssid = "Industria-4.0";
+const char* password = "INDUSTRIA40";
 //Datos del broker MQTT
 const char* mqtt_server = "192.168.0.18"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
 IPAddress server(192,168,0,18);
@@ -160,13 +160,13 @@ void setup() {
   startCameraServer();
 
   Serial.print("Camera Ready! Use 'http://");
-  Serial.print(WiFi.localIP());
+  Serial.print(WiFi.localIP()); // Para ver la IP de la ESP32-CAM
   Serial.println("' to connect");
 
   delay (1000); // Esta espera es solo una formalidad antes de iniciar la comunicación con el broker
 
   // Conexión con el broker MQTT
-  client.setServer(server, 1883); // Conectarse a la IP del broker en el puerto indicado
+  client.setServer("broker.hivemq.com", 1883); // Conectarse a la IP del broker en el puerto indicado
   client.setCallback(callback); // Activar función de CallBack, permite recibir mensajes MQTT y ejecutar funciones a partir de ellos
   delay(1500);  // Esta espera es preventiva, espera a la conexión para no perder información
 
@@ -216,9 +216,10 @@ void callback(char* topic, byte* message, unsigned int length) {
 
   // En esta parte puedes agregar las funciones que requieras para actuar segun lo necesites al recibir un mensaje MQTT
 
+
   // Ejemplo, en caso de recibir el mensaje true - false, se cambiará el estado del led soldado en la placa.
   // El ESP323CAM está suscrito al tema codigoIoT/ejemplo/mqttin
-  if (String(topic) == "codigoIoT/mqtt/civ/pluma/") {  // En caso de recibirse mensaje en el tema codigoIoT/ejemplo/mqttin
+  if (String(topic) == "codigoIoT/mqtt/servo") {  // En caso de recibirse mensaje en el tema codigoIoT/ejemplo/mqttin
     if(messageTemp == "true"){
       Serial.println("Servo prendido");
       myservo.write(SERVO_OPEN);
@@ -242,7 +243,7 @@ void reconnect() {
     // Intentar reconexión
     if (client.connect("ESP32CAMClient")) { //Pregunta por el resultado del intento de conexión
       Serial.println("Conectado");
-      client.subscribe("codigoIoT/mqtt/civ/pluma/"); // Esta función realiza la suscripción al tema
+      client.subscribe("codigoIoT/mqtt/servo"); // Esta función realiza la suscripción al tema
     }// fin del  if (client.connect("ESP32CAMClient"))
     else {  //en caso de que la conexión no se logre
       Serial.print("Conexion fallida, Error rc=");
